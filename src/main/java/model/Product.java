@@ -1,17 +1,17 @@
 package model;
 
-public class product {
-    private String attractedID;
+public class Product {
+    private int attractedID;
     private String nameOfProduct;
     private String category;
     private int quantity;
     private float price;
 
-    public String getAttractedID() {
+    public int getAttractedID() {
         return attractedID;
     }
 
-    public void setAttractedID(String attractedID) {
+    public void setAttractedID(int attractedID) {
         this.attractedID = attractedID;
     }
 
@@ -47,27 +47,35 @@ public class product {
         this.price = price;
     }
 
-    public product(String attractedID) {
-        this.attractedID = attractedID;
-    }
-
-    public product(int quantity) {
+    public Product(int quantity, String field, String category, String s, String field1) {
         this.quantity = quantity;
     }
 
-    public product(float price) {
+    public Product(float price) {
         this.price = price;
     }
 
-    public product(String attractedID, String nameOfProduct, String category, int quantity, float price) {
+    public Product(int attractedID, String nameOfProduct, String category, int quantity, float price) {
         this.attractedID = attractedID;
         this.nameOfProduct = nameOfProduct;
         this.category = category;
         this.quantity = quantity;
         this.price = price;
     }
-    public product() {
-        this.attractedID = "";
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "attractedID=" + attractedID +
+                ", nameOfProduct='" + nameOfProduct + '\'' +
+                ", category='" + category + '\'' +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                '}';
+    }
+
+    public Product() {
+        this.attractedID = 0;
         this.nameOfProduct = "";
         this.category = "";
         this.quantity = 0;
